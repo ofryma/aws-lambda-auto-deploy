@@ -1,8 +1,12 @@
-name: deploy to lambda
-on: [push]
+name: Deploy to lambda
+on:
+  push:
+    branches:
+      - main
 jobs:
-
-  deploy_zip:
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - name: zip lambda code
-        run: zip -r lambda.zip lambda
+    - uses: actions/checkout@v1
+    - name: Zip Folder
+      run: zip -r lambda.zip lambda
