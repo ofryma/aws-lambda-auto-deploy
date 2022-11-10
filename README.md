@@ -1,1 +1,1 @@
-# aws-lambda-auto-deploy
+# AWS lambda auto deploy
