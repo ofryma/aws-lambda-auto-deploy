@@ -7,7 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@master
       
-      - uses: stcalica/update-lambda
+      - name: update lambda function
+        uses: stcalica/update-lambda
         with:
           package: lambda.zip
           function-name: ${{ secrets.LAMBDA_FUNCTION_NAME }}
